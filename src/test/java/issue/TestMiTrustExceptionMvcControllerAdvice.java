@@ -29,6 +29,6 @@ public class TestMiTrustExceptionMvcControllerAdvice {
 	public void checkRuntimeWrappingRestClientResponseException() throws Exception {
 		mockMvc.perform(MockMvcRequestBuilders.get("/fail"))
 				.andExpect(MockMvcResultMatchers.status().is5xxServerError())
-				.andExpect(MockMvcResultMatchers.content().string("someJson"));
+				.andExpect(MockMvcResultMatchers.content().string("{\"Intro to Spring Boot\":\"Spring team\"}"));
 	}
 }
